@@ -1,6 +1,6 @@
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { View, Text, Button, StyleSheet, Image, TouchableOpacity, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, ActivityIndicator } from "react-native";
 
 const WelcomeScreen = ({ navigation }) => {
   const goToLogin = () => {
@@ -32,8 +32,13 @@ const WelcomeScreen = ({ navigation }) => {
           />
         </View>
         <View style={styles.text1}>
-          <Text style={styles.text2}>Let's Get Started</Text>
-          <Text style={styles.text3}>Your Connections At Your Fingertips</Text>
+          <Text style={styles.text2}>SmiCon</Text>
+          <Text style={styles.text3}>Let's Get Started</Text>
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator size="large" color="#ffffff" />
+            <ActivityIndicator size="large" color="#ffffff" />
+            <ActivityIndicator size="large" color="#ffffff" />
+          </View>
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.customButton} onPress={goToLogin}>
@@ -73,6 +78,7 @@ const styles = StyleSheet.create({
   text3: {
     fontSize: 24,
     color: "#ffffff",
+    marginBottom: 20,
   },
   text1: {
     paddingHorizontal: 22,
@@ -108,13 +114,18 @@ const styles = StyleSheet.create({
     left: -50,
     transform: [{ translateX: 50 }, { translateY: 50 }, { rotate: "15deg" }],
   },
+  loadingContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 22,
     paddingHorizontal: 20,
     width: '100%',
-    marginBottom:70,
+    marginBottom: 70,
   },
   customButton: {
     flex: 1,
@@ -126,7 +137,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 18,
-    color: '#007260',
+    color: 'purple',
   },
   title: {
     fontSize: 24,

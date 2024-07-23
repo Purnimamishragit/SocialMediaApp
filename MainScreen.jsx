@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet } from "react-native";
-import NavigationBottomTag from "../Components/NavigationBottomTag";
+import React, { useEffect, useState } from 'react';
+import { StyleSheet } from 'react-native';
+import NavigationBottomTag from '../Components/NavigationBottomTag';
+import { useNavigation } from '@react-navigation/native';
 
 const MainScreen = () => {
-  return <NavigationBottomTag />;
+ 
+  return (
+        <NavigationBottomTag />  );
 };
 
 const styles = StyleSheet.create({
@@ -13,3 +16,4 @@ const styles = StyleSheet.create({
 });
 
 export default MainScreen;
+

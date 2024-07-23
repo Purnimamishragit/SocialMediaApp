@@ -120,7 +120,7 @@ checkboxText: {
 },
 loginButton: {
     marginTop: 20,
-    backgroundColor: '#007260',
+    backgroundColor: 'purple',
     paddingVertical: 10,
     borderRadius: 4,
     alignItems: 'center',
