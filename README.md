@@ -1,4 +1,4 @@
-This project also contains the socket.io implementation to make different servers for the realtime chat screen
+This project is a beginner react app project based on a social media app that only facilitates test based opinions sharing. Further it  also contains the socket.io implementation to make different servers for the realtime chat screen that generates different ids during the auth service to facilitate real time chat's system.
 
 
 
